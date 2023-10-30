@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        table {
+            background-color: #00ff00;
+            width: 50%;
+        }
+
+        .titulos {
+            background-color: #00ffff;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+
+        th {
+            border: 1px solid black;
+        }
+
+        .resto {
+            background-color: #ffff00;
+            text-align: center;
+        }
+    </style>
+    <h1>PÁGINA DEL EJERCICIO 3</h1>
+    <h2>Tabla de cuatro comunidades autónomas</h2>
+    <br>
+    <p>El color verde es #00ff00</p>
+    <p>EL color azul claro es: #00ffff</p>
+    <p>El color amarillo es: #ffff00</p>
+    <table border="4" cellspacing="10" cellpadding="10">
+        <tr class="titulos">
+            <th>Comunidad autónoma</th>
+            <th>Extensión (km²)</th>
+            <th>Habitantes (millones>)</th>
+            <th colspan="4">Provincias</th>
+        </tr>
+        <tr class="resto">
+            <td>Comunidad de Madrid</td>
+            <td rowspan="2"> Menor de 10.000</td>
+            <td>6,6</td>
+            <td>Madrid</td>
+        </tr>
+        <tr class="resto">
+            <td>País Vasco</td>
+            <td>2,17</td>
+            <td>Vizcaya</td>
+            <td>Álava</td>
+            <td>Gipuzkua</td>
+        </tr>
+        <tr class="resto">
+            <td>Comunidad Valenciana</td>
+            <td rowspan="2">Mayor de 10.000</td>
+            <td>4,9</td>
+            <td>Valencia</td>
+            <td>Alicante</td>
+            <td>Castellón</td>
+        </tr>
+        <tr class="resto">
+            <td>Galicia</td>
+            <td>2,7</td>
+            <td>A Coruña</td>
+            <td>Lugo</td>
+            <td>Orense</td>
+            <td>Pontevedra</td>
+        </tr>
+    </table>
+</body>
+
+</html>

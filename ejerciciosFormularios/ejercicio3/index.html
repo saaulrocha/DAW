@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Ordenador Portátil</title>
+</head>
+<body>
+    <h1>Compra de Ordenador Portátil</h1>
+    <h2>Elige tus preferencias y especificaciones</h2>
+    <h3>Características Principales</h3>
+    <h4>Detalles de envío</h4>
+    <center><p>LLena el formulario para procesar tu compra y asegurarte de obtener el equipo perfecto para ti.</p></center>
+    <p><b>Nota:</b> Los campos con * son obligatorios.</p>
+    <form action="/submit" method="POST">
+    <fieldset>
+        <legend>Información Personal</legend>
+        <label for="nombre">Nombre Completo: *</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" title="Por favor, introduce tu nombre y apellidos." required maxlength="50" minlength="5" size="30">
+
+        <br>
+
+        <label for="email">Email: *</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@email.com" title="Introduce una dirección de correo válida." required>
+
+        <br>
+
+        <label for="contrasena">Contraseña: *</label>
+        <input type="password" id="contrasena" name="contrasena" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$" title="La contraseña debe tener al menos 8 caracteres, incluyendo una letra mayúscula, una minúscula y un número." required>
+
+        <br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" title="Elige tu fecha de nacimiento.">
+
+        <br>
+
+        <label for="horario_entrega">Horario de Entrega Preferido:</label>
+        <input type="time" id="horario_entrega" name="horario_entrega" title="Selecciona el horario en que preferirías recibir el ordenador.">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Configuración del Portátil</legend>
+        <label for="color_portatil">Color de Portátil:</label>
+        <input type="color" id="color_portatil" name="color_portatil" title="Elige el color de la carcasa del portátil.">
+
+        <br><br>
+
+        <label>Características Adicionales:</label>
+        <br>
+        <input type="checkbox" id="webcam" name="caracteristicas[]" value="Webcam" checked>
+        <label for="webcam" title="Incluye webcam">Webcam</label>
+        <br>
+        <input type="checkbox" id="bluetooth" name="caracteristicas[]" value="Bluetooth">
+        <label for="bluetooth" title="Incluye conectividad Bluetooth">Bluetooth</label>
+
+        <br><br>
+
+        <label>Sistema Operativo:</label>
+        <br>
+        <br>
+        <input type="radio" id="windows" name="sistema_operativo" value="Windows" title="Descripción del sistema operativo Windows seleccionado.">
+        <label for="windows">Windows</label>
+        <br>
+        <input type="radio" id="mac" name="sistema_operativo" value="Mac" title="Descripción del sistema operativo Mac seleccionado.">
+        <label for="mac">Mac</label>
+        <br>
+        <input type="radio" id="linux" name="sistema_operativo" value="Linux" title="Descripción del sistema operativo Linux seleccionado.">
+        <label for="linux">Linux</label>
+    </fieldset>
+        <br>
+    <fieldset>
+        <legend>Cantidad y Envío</legend>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" value="1" title="Elige la cantidad de portátiles que deseas comprar.">
+    </fieldset>
+        <br>
+
+        <button type="submit">Comprar</button>
+    </form>
+    <p><b>Listado de ventajas</b></p>
+    <ul>
+        <li>Rendimiento superior</li>
+        <li>Diseño moderno</li>
+        <li>Batería de larga duración</li>
+        <br>
+        <li style="list-style: square;">Teclado cómodo</li>
+        <li style="list-style: square;">Pantalla de alta resolución</li>
+        <br>
+        <li style="list-style-type: circle;">Soporte técnico incluido</li>
+    </ul>
+    <p><b>Modelos disponibles</b></p>
+    <ol>
+        <li>Apple MacBook Air (M1, 2020)</li>
+        <li>Apple MacBook Pro (M1, 2020)</li>
+        <li>Dell XPS 13 (2020)</li>
+        <li>HP Spectre x360</li>
+        <li>Microsoft Surface Laptop 4</li>
+        <li>Lenovo ThinkPad X1 Carbon (8th Gen)</li>
+    </ol>
+    <p><b>Glosario</b></p>
+    <dl>
+        <dt>WebCam</dt>
+        <dd>Cámara incorporada en el portátil que permite realizar videoconferencias o grabaciones.</dd>
+        <dt>Bluetooth</dt>
+        <dd>Tecnología de comunicación inalámbrica para el intercambio de datos entre dispositivos cercanos.</dd>
+
+    </dl>
+</body>
+</html>

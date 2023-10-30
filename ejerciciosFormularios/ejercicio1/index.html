@@ -1,0 +1,52 @@
+<!DOCTYPE html5>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario</title>
+</head>
+
+<body>
+    <h1>Formulario de Registro</h1>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre:</label>
+            <input required type="text" id="nombre" name="nombre"><br><br>
+            <label for="apellido">Apellido:</label>
+            <input required type="text" id="apellido" name="apellido"><br><br>
+            <label for="fechaNacimiento">Fecha de Nacimiento</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+            <label for="sexoH">Sexo:
+                <input type="radio" id="sexoM" name="sexo">Masculino
+                <input type="radio" id="sexoF" name="sexo">Femenino
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de contacto</legend>
+            <label for="gmail">Correo electrónico:</label>
+            <input required type="text" id="gmail" name="gmail"><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono"><br><br>
+            <label for="direccion">Dirección</label>
+            <textarea id="direccion" name="direccion"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Encuesta</legend>
+            <p>¿Cómo te enteraste de nosotros?</p>
+            <select name="comoNosConociste">
+                <option>Internet</option>
+                <option>Un amigo</option>
+                <option>Publicidad</option>
+                <option>Otros</option>
+            </select><br>
+            <p>¿Te gustaría recibir noticias nuestras?</p>
+            <input type="checkbox" id="noticias" name="noticias">
+            <label for="noticias">Sí, quiero recibir noticias.</label>
+        </fieldset>
+        <input type="submit" id="enviar" value="Enviar">
+    </form>
+</body>
+
+</html>

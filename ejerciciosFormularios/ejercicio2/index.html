@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curso de Programación Avanzada</title>
+</head>
+
+<body>
+    <header>
+        <h1>Curso de Programación Avanzada</h1>
+    </header>
+
+    <section id="acerca-del-curso">
+        <h2>Acerca del Curso</h2>
+        <p>Destacado: Este curso está especialmente diseñado para aquellos desarrolladores apasionados que desean llevar
+            sus habilidades al siguiente nivel. No sólo cubrimos temas avanzados, sino que te ofrecemos una experiencia
+            integral en el mundo del desarrollo.</p>
+    </section>
+
+    <section id="por-que-elegir-este-curso">
+        <h2>¿Por qué elegir este curso?</h2>
+        <ul>
+            <li>Profesores Expertos con años de experiencia en la industria.</li>
+            <li>Material actualizado constantemente para estar al día con las últimas tendencias.</li>
+            <li>Clases prácticas con proyectos reales y casos de estudio.</li>
+            <li>Comunidad activa de estudiantes y profesionales.</li>
+        </ul>
+    </section>
+
+    <section id="temario-del-curso">
+        <h2>Temario del Curso</h2>
+        <ol>
+            <li>Introducción a la Programación Avanzada</li>
+            <li><i>Estructuras de Datos:</i> Árboles y Grafos</li>
+            <li>Patrones de Diseño Clásicos y Modernos</li>
+            <li>Programación Asíncrona y Concurrency</li>
+            <li>Desarrollo Backend y Frontend</li>
+            <li>Principios de Arquitectura de Software</li>
+            <li>Testing, CI/CD, y Despliegue</li>
+        </ol>
+    </section>
+    <fieldset>
+        <legend>Información Personal</legend>
+    <form id="formulario-inscripcion" method="POST" action="/submit-form">
+        <section id="informacion-personal">
+            <label for="nombre-completo">Nombre Completo:</label>
+            <input type="text" id="nombre-completo" name="nombre-completo" size="40" maxlength="100" required>
+
+            <label for="correo-electronico">Correo Electrónico:</label>
+            <input type="email" id="correo-electronico" name="correo-electronico" size="30" maxlength="100"
+                required>
+
+            <label for="numero-telefono">Número de Teléfono:</label>
+            <input type="tel" id="numero-telefono" name="numero-telefono" size="15" maxlength="15"><br>
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" size="60" maxlength="200">
+        </section>
+    </fieldset>
+    <br>
+    <fieldset>
+        <legend>Experiencia en programación</legend>
+        <section id="experiencia-programacion">
+            <label for="nivel-programacion">Nivel:</label>
+            <select id="nivel-programacion" name="nivel-programacion">
+                <option value="novato">Novato</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="experto">Experto</option>
+            </select><br>
+            <label>Experiencia en lenguajes:</label>
+            <ul>
+                <li><input type="checkbox" id="python" name="lenguaje" value="python"> <label
+                        for="python">Python</label></li>
+                <li><input type="checkbox" id="javascript" name="lenguaje" value="javascript"> <label
+                        for="javascript">JavaScript</label></li>
+                <li><input type="checkbox" id="java" name="lenguaje" value="java"> <label for="java">Java</label></li>
+            </ul>
+        </section>
+    </fieldset>
+    <br>
+        <section id="fuente-informacion">
+            <label>¿Cómo se enteraron de nosotros?</label>
+                <input type="radio" id="internet" name="fuente-informacion" value="internet" required> <label
+                        for="internet">Internet</label>
+                <input type="radio" id="amigo" name="fuente-informacion" value="amigo" required> <label
+                        for="amigo">Amigo</label>
+                <input type="radio" id="publicidad" name="fuente-informacion" value="publicidad" required> <label
+                        for="publicidad">Publicidad</label>
+        </section>
+        <section id="comentarios">
+            <h2>Comentarios</h2>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="50" maxlength="500"></textarea>
+        </section>
+
+        <center><button type="submit" id="enviar" name="enviar">Apuntarme al curso</button></center>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: white;
+            color: white;
+            margin: 0px;
+        }
+
+        .formulario {
+            background-color: rgb(25, 57, 128);
+            width: 1000px;
+            height: 675px;
+            text-align: left;
+            padding-left: 2px;
+        }
+
+        .titulo {
+            padding-top: 4px;
+        }
+
+        .hola {
+            float: right;
+        }
+    </style>
+    <br>
+    <center>
+        <div class="formulario">
+            <center>
+                <h2 class="titulo">Solicitud de Información - Curso de Informática</h2>
+            </center>
+            <form action="recepdatos.php">
+                <label for="Nombre">Nombre completo<sup>*</sup>:</label>
+                <input style="color: lightgray;" type="text" name="Nombre" id="Nombre" value="Nombre y apellidos"
+                    size="40" maxlength="60" required>
+                <br>
+                <label for="correoElectronico">Correo electrónico<sup>*</sup>:</label>
+                <input type="email" name="Email" id="Email" size="35" required>
+                <br>
+                <br>
+                <label for="numeroDeTelefono">Número de teléfono<sup>*</sup>:</label>
+                <input type="tel" name="numeroDeTelefono" id="numeroDeTelefono" size="12" maxlength="9"
+                    title="9 cifras como máximo" required>
+                <br>
+                <br>
+                <label for="curriculumCarta">Subir CV y carta de presentación:</label>
+                <br>
+                <input type="file" title="Preferiblemente adjuntar en formato WORD o PDF" maxlength="2" multiple
+                    id="curriculumCarta">
+                <br>
+                <br>
+                <label for="mes">Mes de interés para el curso:</label>
+                <br>
+                <input type="month" id="mes">
+                <br>
+                <br>
+                <label for="edad">Tu edad:</label>
+                <br>
+                <input type="number" id="edad" min="18" title="Mínimo 18 años">
+                <br>
+                <br>
+                <fieldset>
+                    <legend>¿En qué formato prefieres el curso?<sup>*</sup></legend>
+                    <label for="formato"></label>
+                    <input type="radio" name="formato" id="formato" value="1"> Presencial
+                    <br>
+                    <input type="radio" name="formato" id="formato" value="2"> Online
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Nivel de experiencia en informática <sup>*</sup>:</legend>
+                    <label for="experiencia"></label>
+                    <input type="radio" name="experiencia" id="experiencia" value="1"> Principiante
+                    <br>
+                    <input type="radio" name="experiencia" id="experiencia" value="2" checked> Intermedio
+                    <br>
+                    <input type="radio" name="experiencia" id="experiencia" value="3"> Avanzado
+                </fieldset>
+                <br>
+                <label for="suscribirse"></label>
+                <input type="checkbox" id="suscribirse" checked>Suscribirse al boletín informativo
+                <br>
+                <label for="terminos"></label>
+                <input type="checkbox" id="terminos">Acepto los términos y condiciones
+                <center>
+                    <input type="submit" value="Enviar solicitud">
+                    <br>
+                    <br>
+                    <input type="reset" value="Borrar campos">
+                </center>
+            </form>
+            <a class="hola"><p><u>HOME</u></p></a>
+        </div>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ballon</title>
+
+        <style>
+        #ballon {
+            background-color: red;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            margin: 35%;
+        }
+    </style>
+    </head>
+    <body>
+        <div id="ballon"></div>
+        <script>
+    const ballon = document.getElementById("ballon");
+    let color = ballon.style.backgroundColor = "red";
+    function modificar() {
+        let width = parseInt(ballon.style.width);
+        let height = parseInt(ballon.style.height);
+        if (parseInt(ballon.style.width) < 420) {
+            width += 10;
+            height += 10;
+            ballon.style.width = width + 'px';
+            ballon.style.height = height + 'px';
+         } 
+        else {
+            width = 200;
+            height = 200;
+            ballon.style.width = width + 'px';
+            ballon.style.height = height + 'px';
+        }
+    }
+
+    function modificarcolores() {
+        if (color  == "red")
+        {
+        color = ballon.style.backgroundColor = "green";
+        }
+        else if (color == "green")
+        {
+        color = ballon.style.backgroundColor = "blue";
+        }
+        else if(color == "blue")
+        {
+          color = ballon.style.backgroundColor = "red";
+        }
+        }
+
+        function modificarinversa() {
+        let width = parseInt(ballon.style.width);
+        let height = parseInt(ballon.style.height);
+        if (parseInt(ballon.style.width) > 200) {
+            width -= 5;
+            height -= 5;
+            ballon.style.width = width + 'px';
+            ballon.style.height = height + 'px';
+         } 
+        else {
+            width = 200;
+            height = 200;
+            ballon.style.width = width + 'px';
+            ballon.style.height = height + 'px';
+        }
+    }
+        function modificarcoloresinversa() {
+        if (color  == "red")
+        {
+        color = ballon.style.backgroundColor = "blue";
+        }
+        else if (color == "green")
+        {
+        color = ballon.style.backgroundColor = "red";
+        }
+        else if(color == "blue")
+        {
+          color = ballon.style.backgroundColor = "green";
+        }
+    }
+    ballon.onclick = function() {
+        modificar();
+        modificarcolores();
+    }
+
+    ballon.onmouseleave = function() {
+        modificarinversa();
+        modificarcoloresinversa();
+    }
+</script>
+    </body>
+</html>

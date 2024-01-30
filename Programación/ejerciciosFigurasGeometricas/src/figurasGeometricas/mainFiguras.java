@@ -48,6 +48,7 @@ public class mainFiguras {
         System.out.println();
         System.out.printf("El volumen de la esfera " + esfera3.getTamañoEsfera() + " y " + esfera3.getColorEsfera()+ " es %.2f", esfera3.obtenerVolumenEsfera());
         System.out.println();
+
         System.out.println("Ortoedro 1:");
         ortoedro1.asignarColorOrtoedro();
         System.out.printf("La superficie del ortoedro " + ortoedro1.getTamañoOrtoedro() + " y " + ortoedro1.getColorOrtoedro()+ " es %.2f", ortoedro1.obtenerSuperficieOrtoedro());

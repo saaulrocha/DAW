@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(244, 245, 247);
+}
+p {
+    color: rgb(91, 91, 91);
+}
+.container {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+nav {
+    background-color: rgb(55, 73, 94);
+    flex: 1;
+}
+nav ul {
+    margin-top: 30px;
+    margin-left: 20px;
+    list-style-type: none;
+}
+nav li {
+    margin-bottom: 7px;
+}
+nav a {
+    padding: 2px;
+    color: white;
+    text-decoration: none;
+}
+.content {
+    flex: 3;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+aside {
+    flex: 1;
+    background-color: rgb(133, 161, 168);
+}
+#introduccion {
+    margin-left: 10px;
+}
+#introduccion h1 {
+    margin-top: 30px;
+}
+#introduccion p {
+    margin-top: 20px;
+}
+#tendencias {
+    margin-left: 10px;
+}
+#tendencias h1 {
+    margin-top: 30px;
+}
+#tendencias p {
+    margin-top: 20px;
+}
+#inversiones {
+    margin-left: 10px;
+}
+#inversiones h1 {
+    margin-top: 30px;
+}
+#inversiones p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sidebar h2{
+    margin-top: 20px;
+    border-radius: 19px;
+}
+.sidebar h2 {
+    margin-left: 23px;
+    margin-bottom: 20px;
+}
+.sidebar p {
+    margin-left: 15px;
+}

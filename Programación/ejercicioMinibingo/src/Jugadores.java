@@ -30,7 +30,7 @@ public class Jugadores {
     }
     public int[] comprobarCarton(int[] cartonParaComprobar) {
         int i = 1;
-        if (cartonParaComprobar[i - 1] == cartonParaComprobar[i]
+        if (cartonParaComprobar[i - 1] == cartonParaComprobar[i] && cartonParaComprobar[i + 1] == cartonParaComprobar[i]
         ) {
             generarCarton();
         }

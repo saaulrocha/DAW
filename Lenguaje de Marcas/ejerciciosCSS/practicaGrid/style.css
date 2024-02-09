@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(242, 242, 242);
+}
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+                "header header header"
+                "nav main aside"
+                "footer footer footer";
+    grid-template-columns: 0.8fr 3.5fr 0.8fr;
+}
+header {
+    border-radius: 2px;
+    height: 90px;
+    grid-area: header;
+    background-color: rgb(48, 125, 247);
+    margin-bottom: 10px;
+}
+header h1 {
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+}
+nav {
+    grid-area: nav;
+    background-color: rgb(53, 58, 64);
+    border-radius: 19px;
+    margin-right: 5px;
+    height: 410px;
+}
+nav ul {
+    padding: 30px;
+    list-style-type: none;
+}
+nav li {
+    width: 180px;
+    background-color: rgb(48, 125, 247);
+    margin-bottom: 6px;
+    border-radius: 3px;
+}
+nav a {
+    padding: 7px;
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+main {
+    grid-area: main;
+    background-color: rgb(255, 255, 255);
+    border-radius: 19px;
+    height: 410px;
+}
+main section {
+    padding: 20px;
+}
+main #primera {
+    margin-top: 3px;
+}
+aside {
+    grid-area: aside;
+    background-color: rgb(246, 194, 48);
+    border-radius: 19px;
+    margin-left: 5px;
+    height: 410px;
+}
+aside h3 {
+    padding: 12px;
+    margin-top: 20px;
+}
+aside p {
+padding: 10px;
+}
+footer {
+    margin-top: 8px;
+    background-color:rgb(56, 151, 55);
+    grid-area: footer;
+    height: 80px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+footer p {
+    margin-top: 28px;
+}

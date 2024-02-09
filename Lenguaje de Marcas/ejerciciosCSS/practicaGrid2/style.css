@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+    display: grid;
+    grid-template-areas: 
+    "aside section section";
+    gap: 15px;
+}
+header {
+    background-color: black;
+    height: 200px;
+    text-align: center;
+}
+header h1 {
+    color: white;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+header li {
+    display: inline;
+    margin-right: 10px;
+}

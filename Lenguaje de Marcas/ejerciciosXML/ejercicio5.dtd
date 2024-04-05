@@ -1,0 +1,8 @@
+<!ELEMENT peliculas (pelicula*)>
+<!ELEMENT pelicula (#PCDATA)>
+<!ATTLIST pelicula
+    titulo CDATA #REQUIRED
+    año CDATA #REQUIRED
+    genero CDATA #REQUIRED
+    director CDATA #REQUIRED
+>

@@ -1,0 +1,10 @@
+<!ELEMENT taller (vehiculo+)>
+<!ELEMENT vehiculo (matricula, marca, modelo, reparaciones)>
+<!ELEMENT matricula (#PCDATA)>
+<!ELEMENT marca (#PCDATA)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT reparaciones (reparacion+)>
+<!ELEMENT reparacion (descripcion, fecha, costo)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT costo (#PCDATA)>

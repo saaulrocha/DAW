@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class Proveedores {
@@ -21,41 +19,54 @@ public class Proveedores {
         Productos cafe = new Productos("Café", 2.50);
         Productos aceiteOliva = new Productos("Aceite de oliva", 3.00);
         Productos[] aProductos = { leche, jamon, yogures, pan, huevos, arroz, tomates, manzanas, cafe, aceiteOliva };
-        Scanner menuProductos = new Scanner(System.in);
         int opcionElegida = 0;
         int i = 0;
-        boolean acabado = false;
-        HashMap<String, String> productoporSupermercado = new HashMap<String, String>();
-        HashMap<String, Integer> cantidadporProducto = new HashMap<String, Integer>();
-        int j = 0;
         double precioTotal = 0;
-        while (!acabado) {
+        int[] unidadesTotales = new int[aProductos.length];
+        double[] preciosTotales = new double[aProductos.length];
+        boolean continuar = true;
+        Scanner menuProductos = new Scanner(System.in);
+        while (continuar) {
+            for (int k = 0; k < aProductos.length; k++) {
+                unidadesTotales[k] = 0;
+                preciosTotales[k] = 0;
+            }
+            i = 0;
+            precioTotal = 0;
             while (i != 5) {
+                opcionElegida = 0;
                 while (opcionElegida != -1) {
                     System.out.println(aSupermercados[i].getNombre() + ":");
                     System.out.println("¿Que producto se suministra (1-10)?");
                     opcionElegida = menuProductos.nextInt();
                     if (opcionElegida > 0 && opcionElegida <= 10) {
-                        j++;
                         System.out.println(aProductos[opcionElegida - 1].getNombre() + " "
                                 + aProductos[opcionElegida - 1].getPrecio() + " euros");
                         System.out.println("Introduce el número de unidades");
                         int numeroUnidades = menuProductos.nextInt();
-                        String supermercadoActual = aSupermercados[i].getNombre() + Integer.toString(i + 1);
-                        productoporSupermercado.put(supermercadoActual, aProductos[opcionElegida - 1].getNombre());
-                        String productoActual = aProductos[opcionElegida - 1].getNombre() + Integer.toString(i + 1);
-                        cantidadporProducto.put(productoActual, numeroUnidades);
                         double precioActual = aProductos[opcionElegida - 1].getPrecio() * numeroUnidades;
                         System.out.println("Total: " + precioActual + " euros");
                         precioTotal = precioTotal + precioActual;
-                     }
+                        unidadesTotales[opcionElegida - 1] += numeroUnidades;
+                        preciosTotales[opcionElegida - 1] += precioActual;
+                        aSupermercados[i].addProducto(aProductos[opcionElegida - 1], numeroUnidades, precioActual);
                     }
-                i++;
-                opcionElegida = 0;
                 }
+                System.out.println(aSupermercados[i].getInfo());
+                i++;
             }
             double precioTotalRedondeado = Math.round(precioTotal * 100) / 100.0;
-            System.out.println("El precio total de todos los productos es: " + precioTotalRedondeado);
-            acabado = true;
+            System.out.println("Lista de todos los productos y el precio total:");
+            for (int k = 0; k < aProductos.length; k++) {
+                System.out.println(aProductos[k].getNombre() + ", " + unidadesTotales[k] + " unidades, "
+                        + preciosTotales[k] + " euros");
+            }
+            System.out.println("El precio total de todos los productos es: " + precioTotalRedondeado + " euros");
+            System.out.println("¿Quieres volver a repetir otra ronda de suministro? (si/no)");
+            String respuesta = menuProductos.next();
+            if (respuesta.equalsIgnoreCase("no")) {
+                continuar = false;
+            }
         }
     }
+}

@@ -1,0 +1,36 @@
+<!ELEMENT geografiaMundial (continentes, montanyas, relaciones)>
+<!ELEMENT continentes (continente+)>
+<!ELEMENT continente (paises)>
+<!ATTLIST continente
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED>
+<!ELEMENT paises (pais+)>
+<!ELEMENT pais (ciudadesPrincipales, rios)>
+<!ATTLIST pais
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED>
+<!ELEMENT ciudadesPrincipales (ciudad+)>
+<!ELEMENT ciudad EMPTY>
+<!ATTLIST ciudad
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED>
+<!ELEMENT rios (rio+)>
+<!ELEMENT rio EMPTY>
+<!ATTLIST rio
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED>
+<!ELEMENT montanyas (montanya+)>
+<!ELEMENT montanya EMPTY>
+<!ATTLIST montanya
+    id ID #REQUIRED
+    ubicacionIDrefs IDREF #REQUIRED
+    nombre CDATA #REQUIRED>
+<!ELEMENT relaciones (paisesAdyacentes*, rioFluye*)>
+<!ELEMENT paisesAdyacentes EMPTY>
+<!ATTLIST paisesAdyacentes
+    paisID IDREF #REQUIRED
+    adyacenteAIDrefs IDREFS #REQUIRED>
+<!ELEMENT rioFluye EMPTY>
+<!ATTLIST rioFluye
+    rioID IDREF #REQUIRED
+    fluyeAtravesIDrefs IDREF #REQUIRED>

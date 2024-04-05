@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor-flex {
+            display: flex;
+            flex-direction: row;
+            /* Eje principal es horizontal */
+            align-items:flex-end;
+            /* Alineación en el eje cruzado (vertical) */
+            height: 200px;
+            /* Altura para demostrar la alineación vertical */
+            border: 1px solid black;
+            /* Borde para visualizar el contenedor */
+        }
+
+        .elemento-hijo {
+            margin: 10px;
+            /* Espaciado para visualización */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor-flex">
+        <div class="elemento-hijo">Elemento 1</div>
+        <div class="elemento-hijo">Elemento 2</div>
+    </div>
+      
+</body>
+
+</html>

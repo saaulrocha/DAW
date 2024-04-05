@@ -4,13 +4,13 @@ public class MainBingo {
     public static void main(String[] args) {
         Jugadores jugador1 = new Jugadores("Rocha");
         int[] cartonJugador1 = jugador1.generarCarton();
-        Jugadores jugador2 = new Jugadores("Ruben");
+        Jugadores jugador2 = new Jugadores("Rodri");
         int[] cartonJugador2 = jugador2.generarCarton();
-        Jugadores jugador3 = new Jugadores("Johan");
+        Jugadores jugador3 = new Jugadores("Adri");
         int[] cartonJugador3 = jugador3.generarCarton();
-        Jugadores jugador4 = new Jugadores("Leandro");
+        Jugadores jugador4 = new Jugadores("Nevi");
         int[] cartonJugador4 = jugador4.generarCarton();
-        Jugadores jugador5 = new Jugadores("Valde");
+        Jugadores jugador5 = new Jugadores("Litos");
         int[] cartonJugador5 = jugador5.generarCarton();
         Bingo bingo1 = new Bingo();
         int[] bingoActual = bingo1.generarNumerosBingo();

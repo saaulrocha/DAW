@@ -1,0 +1,41 @@
+<!ELEMENT deportes (deporte+)>
+<!ELEMENT deporte (equipo+, partido+)>
+<!ATTLIST deporte
+    nombre CDATA #REQUIRED
+    federacionInternacional CDATA #REQUIRED
+>
+<!ELEMENT equipo (jugador+)>
+<!ATTLIST equipo
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED
+    fundacion CDATA #REQUIRED
+    ciudad CDATA #REQUIRED
+    entrenador CDATA #REQUIRED
+>
+<!ELEMENT jugador (#PCDATA)>
+<!ATTLIST jugador
+    id ID #REQUIRED
+    nombre CDATA #REQUIRED
+    posicion CDATA #REQUIRED
+    numero CDATA #REQUIRED
+    nacionalidad CDATA #REQUIRED
+>
+<!ELEMENT partido (resultado, arbitro)>
+<!ATTLIST partido
+    id ID #REQUIRED
+    fecha CDATA #REQUIRED
+    lugar CDATA #REQUIRED
+    asistencia CDATA #REQUIRED
+>
+<!ELEMENT resultado (#PCDATA)>
+<!ATTLIST resultado
+    equipoA IDREF #REQUIRED
+    golesA CDATA #REQUIRED
+    equipoB IDREF #REQUIRED
+    golesB CDATA #REQUIRED
+>
+<!ELEMENT arbitro EMPTY>
+<!ATTLIST arbitro
+    nombre CDATA #REQUIRED
+    nacionalidad CDATA #REQUIRED
+>

@@ -1,0 +1,18 @@
+<productos>
+    <producto seccion="Deportes">
+        <nombre>Bicicleta</nombre>
+        <marca>BH</marca>
+    </producto>
+    <producto seccion="Menaje">
+        <nombre>Cafetera</nombre>
+        <marca>Magefesa</marca>
+    </producto>
+    <producto seccion="Alimentación">
+        <nombre>Café</nombre>
+        <marca>Marcilla</marca>
+    </producto>
+    <producto seccion="Alimentación">
+        <nombre>Aceitunas</nombre>
+        <marca>La Española</marca>
+    </producto>
+</productos>

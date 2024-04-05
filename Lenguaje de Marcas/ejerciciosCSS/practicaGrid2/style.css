@@ -4,19 +4,16 @@
 }
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-main {
-    display: grid;
-    grid-template-areas: 
-    "aside section section";
-    gap: 15px;
+    background-color: rgb(215, 215, 215);
 }
 header {
-    background-color: black;
+    background-color: rgb(18, 18, 18);
     height: 200px;
     text-align: center;
+    border-radius: 19px;
 }
 header h1 {
+    padding-top: 40px;
     color: white;
 }
 header a {
@@ -25,5 +22,76 @@ header a {
 }
 header li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 45px;
+}
+header ul {
+    margin-top: 39px;
+}
+main {
+    margin-top: 30px;
+    display: grid;
+    grid-template-areas: 
+    "aside section section"
+    "footer footer footer";
+    grid-template-columns: 1fr 3.5fr;
+    gap: 15px;
+}
+aside {
+    grid-area: aside;
+    margin-left: 15px;
+    border-radius: 19px;
+    height: 380px;
+    background-color: white;
+    border-left: 3px solid green;
+}
+aside h2  {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+aside ul {
+    margin-right: 20px;
+    margin-left: 60px;
+}
+aside li a {
+    color: blue;
+}
+section {
+    border-left: 4px solid rgb(84, 133, 249);
+    grid-area: section;
+    margin-right: 15px;
+    background-color: white;
+}
+section h2 {
+    margin-left: 19px;
+    margin-top: 10px;
+}
+article {
+    border-left: 4px solid rgb(84, 133, 249);
+    border-radius: 19px;
+    height: 200px;
+    background-color: white;
+}
+article h2 {
+    padding-top: 25px;
+    margin-left: 15px;
+}
+p {
+    margin-top: 19px;
+    margin-left: 19px;
+    margin-bottom: 19px;
+}
+footer {
+    margin-top: 8px;
+    background-color: rgb(17, 17, 17);
+    grid-area: footer;
+    height: 90px;
+    width: 100%;
+    border-radius: 19px;
+    color: white;
+    text-align: center;
+}
+footer p {
+    padding-top: 30px;
+    margin-top: 24px;
 }

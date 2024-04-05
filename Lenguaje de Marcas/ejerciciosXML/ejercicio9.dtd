@@ -1,0 +1,11 @@
+<!ELEMENT oficina (empleados)>
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, puesto, email, departamento)>
+<!ATTLIST empleado
+    id ID #REQUIRED
+    supervisor IDREF #IMPLIED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT puesto (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT departamento EMPTY>
+<!ATTLIST departamento nombre CDATA #REQUIRED>

@@ -1,0 +1,19 @@
+<!ELEMENT mobiliario (oficina+)>
+<!ELEMENT oficina (nombre, escritorio*, silla*, archivo*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT escritorio (modelo, dimensiones, cajon*, teclado?)>
+<!ELEMENT silla (modelo, tipo, ruedas?)>
+<!ELEMENT archivo (modelo, dimensiones, capacidad)>
+<!ELEMENT modelo (#PCDATA)>
+<!ELEMENT dimensiones (ancho, alto, profundo)>
+<!ELEMENT ancho (#PCDATA)>
+<!ELEMENT alto (#PCDATA)>
+<!ELEMENT profundo (#PCDATA)>
+<!ELEMENT cajon (numero, tipo)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT teclado (modelo, ergonomica)>
+<!ELEMENT ergonomica (#PCDATA)>
+<!ELEMENT ruedas (cantidad)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT capacidad (#PCDATA)>

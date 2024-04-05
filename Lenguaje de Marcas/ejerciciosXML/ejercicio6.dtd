@@ -1,0 +1,9 @@
+<!ELEMENT ferreteria (material+)>
+<!ELEMENT material (#PCDATA)>
+<!ATTLIST material
+    id CDATA #REQUIRED
+    nombre CDATA #REQUIRED
+    tipo CDATA #REQUIRED
+    precio CDATA #REQUIRED
+    recomendadoPara CDATA #IMPLIED
+>

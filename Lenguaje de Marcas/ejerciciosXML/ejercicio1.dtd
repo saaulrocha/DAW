@@ -1,0 +1,6 @@
+<!ELEMENT proveedores (proveedor+)>
+<!ELEMENT proveedor (nombre, direccion, alimentos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT alimentos (tipo+)>
+<!ELEMENT tipo (#PCDATA)>

@@ -1,0 +1,13 @@
+<!ELEMENT zoologico (habitats)>
+<!ELEMENT habitats (habitat+)>
+<!ELEMENT habitat (nombre, mamiferos?, aves?, reptiles?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT mamiferos (mamifero*)>
+<!ELEMENT aves (ave*)>
+<!ELEMENT reptiles (reptil*)>
+<!ELEMENT mamifero (especie, caracteristicas)>
+<!ELEMENT ave (especie, caracteristicas)>
+<!ELEMENT reptil (especie, caracteristicas)>
+<!ELEMENT especie (#PCDATA)>
+<!ELEMENT caracteristicas (caracteristica+)>
+<!ELEMENT caracteristica (#PCDATA)>
